@@ -21,7 +21,7 @@ def check_and_install_p2rank(p2rank_path):
     """Check if P2Rank exists, if not, auto-download and extract it."""
     expanded_path = os.path.expanduser(p2rank_path)
     
-    # 1. เช็คว่ามีโปรแกรมอยู่แล้วหรือไม่
+    # 1. Check p2rank
     if os.path.exists(expanded_path):
         print(f"✅ Found P2Rank at: {expanded_path}")
         return expanded_path
@@ -29,15 +29,15 @@ def check_and_install_p2rank(p2rank_path):
     print(f"⚠️ P2Rank not found at {expanded_path}.")
     print("⏳ Auto-downloading P2Rank 2.4.1 from GitHub...")
     
-    # 2. ถ้าไม่มี ให้ดาวน์โหลดและแตกไฟล์
+    # 2. If not dowload it
     try:
-        # สั่ง wget
+        # Download p2rank
         subprocess.run(["wget", "https://github.com/rdk/p2rank/releases/download/2.4.1/p2rank_2.4.1.tar.gz"], check=True)
         print("📦 Extracting P2Rank...")
-        # สั่ง tar
+        # Extraction
         subprocess.run(["tar", "-xzf", "p2rank_2.4.1.tar.gz"], check=True)
         
-        # ลบไฟล์ zip ทิ้งเพื่อความสะอาด
+        # Clean
         if os.path.exists("p2rank_2.4.1.tar.gz"):
             os.remove("p2rank_2.4.1.tar.gz")
             
