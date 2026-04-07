@@ -24,7 +24,7 @@ While the Python script uses standard libraries, the pipeline relies on external
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/SunshineDalgarno1/autodock_shasha.git](https://github.com/SunshineDalgarno1/autodock_shasha.git)
+git clone https://github.com/SunshineDalgarno1/autodock_shasha.git
 cd autodock_shasha
 ```
 
