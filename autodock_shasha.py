@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-tools.py - Universal Automated Binding Pocket Prediction & Molecular Docking Pipeline
+autodock_shasha.py - Universal Automated Binding Pocket Prediction & Molecular Docking Pipeline
 Integrates P2Rank (Auto-Install) for dynamic pocket detection and GNINA for high-accuracy docking.
 """
 
