@@ -1,5 +1,3 @@
-ได้เลยครับ ก๊อปปี้โค้ดด้านล่างนี้ทั้งหมดไปวางในไฟล์ `README.md` ของคุณได้เลยครับ
-
 ```markdown
 # 🧬 Universal AutoDock GNINA Pipeline
 **A Smart & Dynamic Molecular Docking Tool integrating P2Rank and GNINA.**
