@@ -13,7 +13,7 @@ This pipeline automates the entire molecular docking process. It dynamically pre
 1. **🤖 Dynamic Pocket Detection:** Automatically detects and evaluates binding pockets. Only pockets with a probability of `> 0.8` are selected for docking. Supports both single-pocket and multi-pocket (e.g., homodimer) targets effortlessly.
 2. **🧠 Smart Bio-Physics Filter:** Intelligently filters results based on physical constraints. It tolerates higher intramolecular strain (+8.5) for "Super-binders" (Vina < -9.0 kcal/mol) while maintaining strict strain limits for standard binders, effectively removing false positives.
 3. **📦 Auto-Install P2Rank:** No need to manually install P2Rank! The script checks if it exists; if not, it automatically downloads and extracts the official release.
-4. **🚀 Highly Optimized Defaults:** Pre-configured with optimal parameters (`Exhaustiveness 64`, `RMSD 2.0`, `Grid Size 20`) for publication-quality results while saving CPU time.
+4. **🚀 Highly Optimized Defaults:** Pre-configured with optimal parameters (`Exhaustiveness 16`, `RMSD 2.0`, `Grid Size 25`) for publication-quality results while saving CPU time.
 5. **🪶 Lightweight Core:** The core script relies **entirely on Python Standard Libraries**. No `pip install` required for the script itself!
 
 ---
