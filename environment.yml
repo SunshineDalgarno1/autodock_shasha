@@ -1,0 +1,12 @@
+name: autodock_shasha
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python>=3.8
+  - openbabel
+  - wget
+  - tar
+  # Note: GNINA is best installed via its official standalone binary
+  # or customized conda installation depending on the user's GPU (CUDA) setup.
