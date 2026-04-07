@@ -1,4 +1,3 @@
-```markdown
 # 🧬 Universal AutoDock GNINA Pipeline
 **A Smart & Dynamic Molecular Docking Tool integrating P2Rank and GNINA.**
 
@@ -30,7 +29,22 @@ cd autodock_shasha
 ```
 
 ### 2. Create the Conda Environment
-Use the provided `environment.yml` to install necessary dependencies (Python, OpenBabel, Wget, Tar):
+To ensure all dependencies (Python, OpenBabel, Wget, Tar) are correctly installed, create a file named `environment.yml` in your project folder with the following content:
+
+```yaml
+name: gnina_pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python>=3.8
+  - openbabel
+  - wget
+  - tar
+```
+
+Then, build and activate the environment by running these commands in your terminal:
 ```bash
 conda env create -f environment.yml
 conda activate gnina_pipeline
@@ -43,16 +57,30 @@ GNINA must be installed and accessible in your system's PATH.
 
 ---
 
+## 📄 Input File Format (`ligands.csv`)
+
+The ligands file must be a comma-separated values (CSV) file. It must contain **at least two columns** with the exact headers: `Name` and `SMILES`.
+
+**Example `ligands.csv`:**
+```csv
+Name,SMILES
+Minocycline,CN(C)C1C2CC3CC4=C(C=CC(=C4C(=O)C3=C(C2(C(=O)C(=C1O)C(=O)N)O)O)O)N(C)C
+Triclosan,C1=CC(=C(C=C1Cl)O)OC2=C(C=C(C=C2)Cl)Cl
+Phloretin,C1=CC(=CC=C1CCC(=O)C2=C(C=C(C=C2O)O)O)O
+```
+*(💡 Pro-Tip: Avoid using spaces in the `Name` column to ensure seamless file generation. Use underscores `_` instead.)*
+
+---
+
 ## 🚀 Usage Guide
 
-The script is designed to be plug-and-play. Make sure your environment is activated before running.
+The script is designed to be plug-and-play. Make sure your Conda environment is activated before running.
 
 ### Basic Usage (Quick Run)
 For a standard run using default high-accuracy parameters:
 ```bash
 python autodock_shasha.py -r target_protein.pdb -l ligands.csv
 ```
-*Note: Your `ligands.csv` must contain at least two columns with headers: `Name` and `SMILES`.*
 
 ### Advanced Usage
 You can customize grid sizes, exhaustiveness, and pose diversity constraints:
@@ -99,4 +127,3 @@ All results will be safely stored in a dynamically generated, timestamped direct
 
 ## 📝 Author
 Developed by **Parinya Tipanyo (Shasha)**.
-```
